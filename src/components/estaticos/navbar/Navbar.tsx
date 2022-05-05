@@ -9,48 +9,51 @@ function Navbar() {
         <>
             <AppBar position="static"  >
                 <Toolbar variant="dense" >
-                    <Box className='cursor'>
-                        <Typography variant="h5" color="inherit">
-                            Home
-                        </Typography>
-                    </Box>
-
+                    <Link to='/home'>
+                        <Box className='cursor'>
+                            <Typography variant="h5" color="inherit">
+                                Home
+                            </Typography>
+                        </Box>
+                    </Link>
                     <Box display="flex" justifyContent="start">
-                        <Box mx={1} className='cursor'> 
+                        <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
                                 Quem somos
                             </Typography>
                         </Box>
+                        <Link to='/posts'>
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
-                                O Espaço
-                                </Typography>
-                    </Box>
-                    <Box mx={1} className='cursor'>
-                        <Typography variant="h6"  color="inherit">
-                            Mural
-                        </Typography>
-                    </Box>
-                    <Box mx={1} className='cursor'>
-                        <Typography variant="h6" color="inherit" >
-                            Agendamentos
-                        </Typography>
-                    </Box>
-                    <Link to='/login' className='text-decorator-none'>
-                    <Box mx={1} className='cursor'>
-                        <Typography variant="h6" color="inherit" >
-                            Logout
-                        </Typography>
+                                postagens
+                            </Typography>
                         </Box>
                         </Link>
-                   
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" color="inherit">
+                                Mural
+                            </Typography>
                         </Box>
-                       
-                        </Toolbar>
-                        </AppBar>
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" color="inherit" >
+                                Agendamentos
+                            </Typography>
+                        </Box>
+                        <Link to='/login' className='text-decorator-none'>
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="inherit" >
+                                    Logout
+                                </Typography>
+                            </Box>
+                        </Link>
 
-                </>
+                    </Box>
 
-                )
+                </Toolbar>
+            </AppBar>
+
+        </>
+
+    )
 }
-                export default Navbar;
+export default Navbar;
